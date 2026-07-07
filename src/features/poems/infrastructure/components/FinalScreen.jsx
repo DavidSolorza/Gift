@@ -144,7 +144,7 @@ export const FinalScreen = ({ onBypass }) => {
           animate="visible"
           className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#F5EBD0] tracking-wide mb-6 leading-tight"
         >
-          El recorrido ha finalizado, Nataly.
+          El recorrido ha finalizado, mi amor.
         </motion.h1>
 
         <motion.p 
@@ -189,7 +189,7 @@ export const FinalScreen = ({ onBypass }) => {
           onClick={onBypass}
           className="mt-12 px-6 py-2.5 bg-[#F5EBD0]/05 hover:bg-[#F5EBD0]/15 text-[#F5EBD0] border border-[#F5EBD0]/35 rounded-full font-mono text-xs tracking-widest uppercase transition-all duration-300 cursor-pointer shadow-[0_4px_15px_rgba(0,0,0,0.4)]"
         >
-          Volver a la bitácora
+          Volver al diario
         </motion.button>
       </div>
 

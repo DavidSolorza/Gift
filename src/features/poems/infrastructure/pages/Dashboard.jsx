@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PoemCard } from '../components/PoemCard.jsx';
-import { Heart, Calendar, Compass, RefreshCw, X, Lock } from 'lucide-react';
+import { Heart, Compass, X, Lock } from 'lucide-react';
 
 /**
  * Helper: getModalBg
@@ -61,13 +61,7 @@ export const Dashboard = ({
     return totalCount > 0 ? Math.round((unlockedCount / totalCount) * 100) : 0;
   }, [unlockedCount, totalCount]);
 
-  // Verificar si la fecha de la URL es diferente de la real
-  const isSimulation = useMemo(() => {
-    const todayStr = new Date().toISOString().split('T')[0];
-    const local = new Date();
-    const localStr = `${local.getFullYear()}-${String(local.getMonth() + 1).padStart(2, '0')}-${String(local.getDate()).padStart(2, '0')}`;
-    return targetDate !== todayStr && targetDate !== localStr;
-  }, [targetDate]);
+
 
   // Manejo de la notificación Toast
   const triggerToast = (unlockDateStr) => {
@@ -128,30 +122,14 @@ export const Dashboard = ({
       <div className="max-w-6xl mx-auto relative z-10">
         
         {/* Cabecera del Panel */}
-        <header className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#F5EBD0]/10 pb-8">
-          <div>
-            <div className="flex items-center gap-2 mb-2 text-[#F5EBD0]/80 font-mono text-xs uppercase tracking-widest font-bold">
-              <Compass className="w-4 h-4 text-[#F5EBD0]/80" />
-              <span>Bitácora de Sentimientos</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl font-serif font-semibold text-[#F5EBD0] tracking-wide">
-              El Recorrido de Nataly
-            </h1>
+        <header className="mb-12 border-b border-[#F5EBD0]/10 pb-8">
+          <div className="flex items-center gap-2 mb-2 text-[#F5EBD0]/80 font-mono text-xs uppercase tracking-widest font-bold">
+            <Compass className="w-4 h-4 text-[#F5EBD0]/80" />
+            <span>Diario de Versos</span>
           </div>
-
-          {/* Estado de la simulación */}
-          {isSimulation && (
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-[#F5EBD0]/05 border border-[#F5EBD0]/20 text-[#F5EBD0]/90 text-[11px] font-mono rounded-lg self-start md:self-auto">
-              <Calendar className="w-3.5 h-3.5" />
-              <span>Simulación Activa: {targetDate}</span>
-              <button 
-                onClick={() => { window.location.href = window.location.pathname; }}
-                className="ml-1 hover:text-white transition-colors cursor-pointer"
-              >
-                <RefreshCw className="w-3 h-3 inline" />
-              </button>
-            </div>
-          )}
+          <h1 className="text-3xl sm:text-4xl font-serif font-semibold text-[#F5EBD0] tracking-wide">
+            El Recorrido del Amor
+          </h1>
         </header>
 
         {/* Tarjeta de Estadísticas / Progreso */}
@@ -295,7 +273,7 @@ export const Dashboard = ({
                 <span>Revelado el {activePoem.unlockDate}</span>
                 <div className="flex items-center gap-1 text-[#F5EBD0]/80">
                   <Heart className="w-3 h-3 fill-[#F5EBD0]/20" />
-                  <span>Para Nataly</span>
+                  <span>Para ti ♡</span>
                 </div>
               </footer>
             </motion.article>
