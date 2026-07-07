@@ -1,0 +1,224 @@
+{
+  "poemas": [
+    {
+      "id": 1,
+      "unlock_date": "2026-07-14",
+      "module": "AMOR",
+      "title": "Eres Mi Hoy",
+      "content": [
+        "Antes de ti no sabía\nque el tiempo podía detenerse,\nque una sola mirada bastaba\npara llenar el alma de colores.",
+        "Eres el hoy que quiero vivir,\nel mañana que me ilusiona,\nla certeza silenciosa\nde que mi corazón ya eligió.",
+        "No fue un flechazo fugaz,\nfue un convencimiento lento,\ncomo el amanecer que llega\nsin prisa, pero inevitable.",
+        "Contigo descubro\nque amar no es solo sentir,\nes elegir cada día\nvolver a quedarme contigo."
+      ]
+    },
+    {
+      "id": 2,
+      "unlock_date": "2026-07-14",
+      "module": "AMOR",
+      "title": "Mi Corazón Ya Sabe",
+      "content": [
+        "No necesito que me digas\nque me quieres;\nmi corazón ya lo sabe.\nLo reconoce en tu voz,\nen cómo pronuncias mi nombre,\nen ese silencio tuyo\nque dice más que las palabras.",
+        "Hay personas que llegan\ny te cambian la vida sin pedir permiso,\nque se quedan a vivir\nen ese lugar donde antes solo había vacío.",
+        "Tú eres ese lugar ahora,\nmi refugio favorito,\nmi territorio seguro,\nel único sitio donde quiero perderme."
+      ]
+    },
+    {
+      "id": 3,
+      "unlock_date": "2026-07-14",
+      "module": "AMOR",
+      "title": "Te Elijo",
+      "content": [
+        "Podría haber caminado mil rutas,\npero ninguna me llevaba a ti,\nninguna tenía tu risa,\nni tu forma de mirarme\ncomo si yo fuera lo único que importa.",
+        "Te elijo hoy,\nte elegiré mañana,\ny todos los días que me presten\npara seguir amándote.",
+        "No es perfecto este amor,\npero es nuestro,\ny en su imperfección encuentro\ntodo lo que siempre busqué."
+      ]
+    },
+    {
+      "id": 4,
+      "unlock_date": "2026-07-14",
+      "module": "AMOR",
+      "title": "La Geometría del Amor",
+      "content": [
+        "No sé de matemáticas,\npero contigo entiendo\nque dos más dos puede ser cinco,\nque los opuestos se atraen\ny que hay ángulos en el alma\nque solo tú sabes medir.",
+        "Tú completas mis figuras torcidas,\narreglas mis desequilibrios,\neres el teorema que no sabía\nque necesitaba demostrar.",
+        "Contigo los números tienen sentido,\nlas cuentas dan exactas,\ny hasta las deudas del pasado\nse van saldando poco a poco."
+      ]
+    },
+    {
+      "id": 5,
+      "unlock_date": "2026-07-14",
+      "module": "AMOR",
+      "title": "Por Ti",
+      "content": [
+        "Por ti madrugo sonriendo,\npor ti duermo tranquilo,\npor ti creo en los finales felices\naunque el mundo me haya enseñado otra cosa.",
+        "Por ti me vuelvo mejor persona,\npor ti olvido los rencores,\npor ti aprendí que amar\nes también dejar ir los miedos.",
+        "Por ti, y solo gracias a ti,\nmi mundo tiene otro color,\notro sabor, otra textura,\notra razón inmensa para seguir."
+      ]
+    },
+    {
+      "id": 6,
+      "unlock_date": "2026-07-15",
+      "module": "CARIÑO",
+      "title": "Ganas de Abrazarte",
+      "content": [
+        "Tengo ganas de abrazarte,\nde rodearte con mis brazos\ny quedarme ahí un ratito,\nsin hablar, sin hacer nada,\nsolo sintiendo que estás,\nque existes cerca de mí.",
+        "A veces el abrazo más largo\nes el que no se ve venir,\nel que das sin avisar\ncuando solo quieres decir:\n\"Aquí estoy, no estás sola\".",
+        "Ese abrazo tuyo que lo cura todo,\nque no necesita palabras,\nque con su silencio me dice\ntodo lo que mi pecho necesita oír."
+      ]
+    },
+    {
+      "id": 7,
+      "unlock_date": "2026-07-15",
+      "module": "CARIÑO",
+      "title": "Contigo Quiero...",
+      "content": [
+        "Contigo quiero aprender\na hacer del amor algo eterno,\nno de forma apresurada,\nsino lenta, cotidiana,\nde esa que se construye\ncon pequeños gestos repetidos.",
+        "Quiero ser tu café de la mañana,\ntu canción de camino a casa,\ntu personaje favorito\nde esa serie que ves de noche.",
+        "Quiero ser tu refugio simple,\ntu complicidad secreta,\ntu risa fácil,\ntu forma favorita de ser feliz."
+      ]
+    },
+    {
+      "id": 8,
+      "unlock_date": "2026-07-15",
+      "module": "CARIÑO",
+      "title": "Ternura",
+      "content": [
+        "Tu forma de fruncir el ceño\ncuando no entiendes algo,\nla manera en que ríes\ncerrando los ojitos,\ncómo te escondes detrás\nde tus manos cuando te da pena...",
+        "Son tantas las ternuras tuyas\nque podrían llenar las páginas\nde un libro que nunca terminaría.\nPorque cada día encuentro otra,\notra forma en que el mundo\nse hace más suave gracias a ti."
+      ]
+    },
+    {
+      "id": 9,
+      "unlock_date": "2026-07-15",
+      "module": "CARIÑO",
+      "title": "Quererte Así",
+      "content": [
+        "Te quiero así,\ncon el pelo desordenado,\nsin maquillaje,\ncon sueño,\ncon hambre,\ny con esos días malos\ndonde sientes que nada sale bien.",
+        "Te quiero con las ojeras del cansancio,\ncon la nariz roja del frío,\ncon la voz ronca de la mañana,\ncon todos esos momentos\ndonde no estás perfecta,\npero estás completa.",
+        "Esa es la mujer que amo.\nNo la imagen, sino la persona,\nno la foto, sino la original,\nno de a ratos, sino todo el tiempo."
+      ]
+    },
+    {
+      "id": 10,
+      "unlock_date": "2026-07-15",
+      "module": "CARIÑO",
+      "title": "Pequeños Gestos",
+      "content": [
+        "No necesito grandes declaraciones,\nme bastan tus pequeños gestos:\nque me guardes comida,\nque me recuerdes lo que olvidé,\nque me mires y sonrías\ncuando crees que no te estoy viendo.",
+        "Cada gesto tuyo es un \"te quiero\"\nque mi corazón colecciona.\nSon las páginas de un diario invisible\ndonde guardo cada prueba\nde que nuestra historia es real,\nde que tú, por fin, eres real."
+      ]
+    },
+    {
+      "id": 11,
+      "unlock_date": "2026-07-16",
+      "module": "ADMIRACIÓN",
+      "title": "Cómo Eres",
+      "content": [
+        "Admiro cómo eres.\nNo solo lo que haces,\nsino esa forma que tienes\nde pararte frente al mundo,\nde relacionarte con la vida,\nde no rendirte nunca.",
+        "Admiro tu fortaleza escondida,\nesa que no le muestras a todos,\nla que sale a flote\ncuando todo se pone difícil\ny tú sigues adelante\ncomo si fuera lo más natural.",
+        "Tienes esa capacidad de brillar\nincluso en los días grises,\nde encontrar luz donde otros ven sombra,\nde ser sol para quienes te rodean\nsin pedir jamás nada a cambio."
+      ]
+    },
+    {
+      "id": 12,
+      "unlock_date": "2026-07-16",
+      "module": "ADMIRACIÓN",
+      "title": "Lo Que No Sabías de Ti",
+      "content": [
+        "No sabías lo fuerte que eras\nhasta que la vida te puso a prueba.\nNo sabías lo valiente que eras\nhasta que no tuviste otra opción.",
+        "Y yo tengo el privilegio gigante\nde haber visto eso de cerca,\nde ser el testigo silencioso\nde cómo te transformas\ncuando el momento lo requiere.",
+        "Admiro en ti esa dualidad perfecta:\nla ternura y la fuerza,\nla dulzura y el carácter,\nla mujer que a veces se derrumba,\npero que siempre se recompone."
+      ]
+    },
+    {
+      "id": 13,
+      "unlock_date": "2026-07-16",
+      "module": "ADMIRACIÓN",
+      "title": "Tu Forma de Pensar",
+      "content": [
+        "Hay algo en tu mente\nque me fascina profundamente.\nEsa forma que tienes\nde ver el mundo diferente,\nde encontrar conexiones\ndonde yo solo veo caos.",
+        "Tu forma de pensar es como\nun jardín secreto que admiro desde afuera,\nlleno de flores que no entiendo,\npero que me encantaría plantar\nen mi propio terreno mental.",
+        "Aprendo de ti cada día,\nme haces pensar distinto,\nme haces mejor hombre\nsolo con atreverte a ser tú misma."
+      ]
+    },
+    {
+      "id": 14,
+      "unlock_date": "2026-07-16",
+      "module": "ADMIRACIÓN",
+      "title": "Cuando Te Ves",
+      "content": [
+        "Cuando te ves en el espejo\nno sabes lo que yo veo.\nPara ti son solo ojos,\nnariz, boca, rasgos...\npero para mí, eres la obra de arte\nmás perfecta de la creación.",
+        "Veo en ti una luz que no refleja el cristal,\nuna belleza que no se mide en centímetros,\nuna elegancia que no necesita adornos,\nuna gracia que no se aprende en ningún lado.",
+        "Eres hermosa porque eres tú,\ny eso nadie más lo puede ser.\nEsa es tu marca personal,\ntu forma única de existir en este mundo."
+      ]
+    },
+    {
+      "id": 15,
+      "unlock_date": "2026-07-16",
+      "module": "ADMIRACIÓN",
+      "title": "Mujer Extraordinaria",
+      "content": [
+        "Mujer, no sabes lo extraordinaria que eres.\nCuántos no podrían soportar\nlo que tú haces cada día,\ncon esa naturalidad que engaña,\nesa facilidad que no es facilidad,\nsino puro talento disfrazado de simpleza.",
+        "Admiro tu inmensa capacidad de seguir,\nde no tirar la toalla,\nde buscarle siempre la salida\na los laberintos que te pone la vida,\nde no perder la fe\nincluso cuando todo parece nublado.",
+        "Eres mi mujer extraordinaria,\ny yo tengo la suerte infinita\nde que me hayas elegido a mí."
+      ]
+    },
+    {
+      "id": 16,
+      "unlock_date": "2026-07-17",
+      "module": "CONFIANZA",
+      "title": "Puedo Contarte",
+      "content": [
+        "Puedo contarte lo que nunca cuento:\nmis miedos, mis fracasos,\nlas cosas que me avergüenzan,\nlas noches que no duermo\npensando en lo que no puedo cambiar.",
+        "Contigo bajo la guardia,\ncontigo no necesito caretas,\npuedo mostrar mis grietas\ny saber, con absoluta certeza,\nque no las usarás para hacerme daño.",
+        "Esa es la paz que me das,\nese espacio seguro,\nese lugar en el mundo\ndonde puedo ser yo sin miedo;\ntotalmente yo, sin disfraces."
+      ]
+    },
+    {
+      "id": 17,
+      "unlock_date": "2026-07-17",
+      "module": "CONFIANZA",
+      "title": "Contigo Soy Yo",
+      "content": [
+        "Contigo no tengo que fingir,\nno tengo que ser otra persona,\nno tengo que calcular cada palabra\nni pensar en cómo vas a reaccionar.",
+        "Contigo puedo ser el niño que fui,\nel joven que dudó de todo,\ny el hombre que, a veces, aún le teme\na las cosas que no controla.",
+        "Contigo soy yo, completo.\nCon mis luces y mis sombras,\ncon días buenos y malos,\ncon esta forma de ser mía\nque no siempre es fácil de entender.",
+        "Y aun así, tú me quieres,\ny eso me salva la vida cada día."
+      ]
+    },
+    {
+      "id": 18,
+      "unlock_date": "2026-07-17",
+      "module": "CONFIANZA",
+      "title": "Tu Silencio Es Seguro",
+      "content": [
+        "Tu presencia no asusta,\ntu mirada no juzga,\ntus palabras no lastiman,\ny tus pausas no me condenan.",
+        "Sé que contigo puedo decir\nlas cosas más difíciles,\nlas más tontas, las más pesadas,\ny sé que tú las recibirás\ncon esa paciencia infinita\nque solo te pertenece a ti.",
+        "No temo mostrarte mi verdad,\nporque sé que en tus manos\nestá completamente segura,\nque será tratada con cuidado,\ncomo el tesoro que has hecho de mí."
+      ]
+    },
+    {
+      "id": 19,
+      "unlock_date": "2026-07-17",
+      "module": "CONFIANZA",
+      "title": "Confío en Tu Amor",
+      "content": [
+        "Confío en tu amor como creo\nen las cosas que no se pueden ver:\nen el aire, en la gravedad,\nen que mañana saldrá el sol,\nen que la magia existe.",
+        "Confío en ti como creo\nen mi propia existencia.\nComo una ley incuestionable,\nalgo que no necesita pruebas\nporque se siente en los huesos,\nen el alma, en la sangre.",
+        "No hay duda posible,\nno hay desconfianza que valga,\nporque lo nuestro tiene bases sólidas,\ntiene raíces profundas,\ntiene algo que simplemente no se rompe."
+      ]
+    },
+    {
+      "id": 20,
+      "unlock_date": "2026-07-17",
+      "module": "CONFIANZA",
+      "title": "Puedes Contar Conmigo",
+      "content": [
+        "Para lo que necesites,\ny para lo que no necesites,\npara todo eso, estoy yo.",
+        "Puedes contar conmigo\npara lo inmenso y para lo diminuto,\npara las crisis y para los martes aburridos,\npara las risas y para los llantos,\npara los grandes planes y para los imprevistos.",
+        "Estaré donde me necesites,\nincluso si no me llamas,\nincluso si no dices nada.\nMi presencia será silenciosa,\npero absolutamente constante.\nComo una promesa que no hace ruido,\npero que se cumple siempre."
+      ]
+    }
+  ]
+}
