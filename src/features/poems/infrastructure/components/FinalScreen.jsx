@@ -152,7 +152,7 @@ export const FinalScreen = ({ onBypass }) => {
           animate="visible"
           className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-purple-100 tracking-wide mb-6 leading-tight"
         >
-          El recorrido ha finalizado, Nataly.
+          El recorrido ha finalizado, mi amor.
         </motion.h1>
 
         <motion.p 

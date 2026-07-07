@@ -102,10 +102,10 @@ export const Dashboard = ({
           <div>
             <div className="flex items-center gap-2 mb-2 text-purple-400 font-mono text-xs uppercase tracking-widest font-bold">
               <Compass className="w-4 h-4 text-purple-400" />
-              <span>Bitácora de Sentimientos</span>
+              <span>Mi corazon late por ti</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-serif font-semibold text-white tracking-wide">
-              El Recorrido de Nataly
+              Un recorrido maravillo donde las palabras no alcanzan 
             </h1>
           </div>
 

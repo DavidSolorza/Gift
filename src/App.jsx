@@ -69,23 +69,29 @@ function App() {
   }
 
   // 1. Si la fecha del sistema indica cierre absoluto (2 de Agosto de 2026), renderizamos FinalScreen directamente (salvo bypass)
+  let activeContent;
   if (isSystemShutdown && !bypassShutdown) {
-    return <FinalScreen onBypass={handleBypass} />;
-  }
-
-  // 2. Si no es el cierre, alternamos entre Landing y Dashboard
-  if (currentView === 'landing') {
-    return <Landing onStart={() => setCurrentView('dashboard')} />;
+    activeContent = <FinalScreen onBypass={handleBypass} />;
+  } else if (currentView === 'landing') {
+    // 2. Si no es el cierre, alternamos entre Landing y Dashboard
+    activeContent = <Landing onStart={() => setCurrentView('dashboard')} />;
+  } else {
+    activeContent = (
+      <Dashboard
+        unlockedPoems={unlockedPoems}
+        lockedPoems={lockedPoems}
+        totalCount={totalCount}
+        unlockedCount={unlockedCount}
+        targetDate={targetDate}
+      />
+    );
   }
 
   return (
-    <Dashboard
-      unlockedPoems={unlockedPoems}
-      lockedPoems={lockedPoems}
-      totalCount={totalCount}
-      unlockedCount={unlockedCount}
-      targetDate={targetDate}
-    />
+    <>
+      <div className="grain-overlay" />
+      {activeContent}
+    </>
   );
 }
 

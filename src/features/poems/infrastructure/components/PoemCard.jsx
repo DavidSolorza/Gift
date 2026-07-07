@@ -60,6 +60,7 @@ export const PoemCard = ({ poem, isLocked, isTodayRelease, onClick, onLockClick 
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
+      whileTap={!isLocked ? { scale: 0.98 } : {}}
       animate={{
         rotateX: rotateX,
         rotateY: rotateY,
@@ -69,19 +70,18 @@ export const PoemCard = ({ poem, isLocked, isTodayRelease, onClick, onLockClick 
         type: "spring", 
         stiffness: 150, 
         damping: 18,
-        // Evitamos que layout se anime con resorte excesivo si no es necesario
         layout: { type: "spring", stiffness: 220, damping: 26 }
       }}
       style={{
         transformStyle: "preserve-3d",
         perspective: 1000,
       }}
-      className={`group relative overflow-hidden flex flex-col justify-between p-6 rounded-2xl bg-gradient-to-br from-[#121214] to-[#0d0d0f] border min-h-[280px] cursor-pointer transition-all duration-300 ${
+      className={`group relative overflow-hidden flex flex-col justify-between p-6 rounded-2xl bg-white/[0.02] backdrop-blur-md border min-h-[280px] cursor-pointer transition-all duration-500 ${
         isTodayRelease 
-          ? 'border-purple-500/80 shadow-[0_0_15px_rgba(168,85,247,0.15)]' 
+          ? 'border-purple-500/50 shadow-[0_0_20px_rgba(168,85,247,0.18)]' 
           : isLocked 
-            ? 'border-white/5 opacity-55 cursor-not-allowed' 
-            : 'border-white/[0.06] hover:border-purple-500/40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(168,85,247,0.06)]'
+            ? 'border-white/[0.04] opacity-55 cursor-not-allowed' 
+            : 'border-white/[0.06] hover:border-purple-500/30 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5),0_0_20px_rgba(168,85,247,0.06)]'
       }`}
     >
       {/* Glow de fondo al hacer hover */}
