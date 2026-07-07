@@ -4,10 +4,41 @@ import { PoemCard } from '../components/PoemCard.jsx';
 import { Heart, Calendar, Compass, RefreshCw, X, Lock } from 'lucide-react';
 
 /**
+ * Helper: getModalBg
+ * Mapea los diferentes módulos a variaciones sutiles dentro de la gama cromática del vino (Wine #7F011F),
+ * logrando una sutil atmósfera distintiva para cada bloque emocional.
+ */
+const getModalBg = (moduleName) => {
+  switch (moduleName) {
+    case 'AMOR':
+    case 'CARIÑO':
+    case 'ADMIRACIÓN':
+    case 'CONFIANZA':
+      return 'from-[#7F011F] to-[#500010] border-[#F5EBD0]/35';
+    case 'APEGO':
+    case 'PROTECCIÓN':
+    case 'DESEO':
+    case 'PAZ':
+      return 'from-[#6c0119] to-[#40000a] border-[#F5EBD0]/35';
+    case 'MIEDO':
+    case 'ORGULLO':
+    case 'CELOS':
+    case 'GRATITUD':
+      return 'from-[#550113] to-[#2b0005] border-[#F5EBD0]/35';
+    case 'POEMAS MIXTOS':
+    case 'POEMAS ADICIONALES':
+      return 'from-[#8c0223] to-[#550012] border-[#F5EBD0]/35';
+    case 'EL FINAL':
+      return 'from-[#74011b] to-[#45000e] border-[#F5EBD0]/35';
+    default:
+      return 'from-[#7F011F] to-[#550013] border-[#F5EBD0]/30';
+  }
+};
+
+/**
  * Página: Dashboard
  * Panel principal de poemas. Muestra estadísticas de progreso,
- * un grid responsivo con carga escalonada (Staggered), soporte para simulación de fechas,
- * notificaciones Toast personalizadas para bloqueos y un lector expandido via layoutId.
+ * un grid responsivo y un lector expandido. Adaptado a la paleta Wine & Sand.
  * Autor: Agente 5 (Senior Frontend Engineer)
  */
 export const Dashboard = ({ 
@@ -30,7 +61,7 @@ export const Dashboard = ({
     return totalCount > 0 ? Math.round((unlockedCount / totalCount) * 100) : 0;
   }, [unlockedCount, totalCount]);
 
-  // Verificar si la fecha de la URL es diferente de la real para mostrar la alerta
+  // Verificar si la fecha de la URL es diferente de la real
   const isSimulation = useMemo(() => {
     const todayStr = new Date().toISOString().split('T')[0];
     const local = new Date();
@@ -40,7 +71,6 @@ export const Dashboard = ({
 
   // Manejo de la notificación Toast
   const triggerToast = (unlockDateStr) => {
-    // Formatear la fecha del bloqueo
     const months = [
       'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
       'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
@@ -62,23 +92,23 @@ export const Dashboard = ({
     }, 3200);
   };
 
-  // Contenedor de la lista para animar los elementos secuencialmente (Stagger)
+  // Contenedor de la lista para animar los elementos secuencialmente
   const gridVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.03, // Transición secuencial rápida y profesional
+        staggerChildren: 0.03,
         delayChildren: 0.1
       }
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0C] text-gray-100 py-12 px-4 sm:px-6 lg:px-8 relative selection:bg-purple-500/30 overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#7F011F] to-[#550013] text-[#F5EBD0] py-12 px-4 sm:px-6 lg:px-8 relative selection:bg-[#F5EBD0]/20 overflow-x-hidden">
       
-      {/* Fondo con degradado radial sutil */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(88,28,135,0.08)_0%,transparent_50%)] pointer-events-none" />
+      {/* Fondo con degradado radial sutil en tono Sand */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,235,208,0.04)_0%,transparent_60%)] pointer-events-none" />
 
       {/* Notificación Toast */}
       <AnimatePresence>
@@ -87,9 +117,9 @@ export const Dashboard = ({
             initial={{ opacity: 0, y: -50, x: "-50%", scale: 0.95 }}
             animate={{ opacity: 1, y: 0, x: "-50%", scale: 1 }}
             exit={{ opacity: 0, y: -20, x: "-50%", scale: 0.95 }}
-            className="fixed top-6 left-1/2 z-50 px-5 py-3.5 bg-purple-950/90 border border-purple-500/30 text-purple-200 text-xs tracking-wider uppercase font-mono rounded-xl shadow-[0_10px_30px_rgba(168,85,247,0.2)] flex items-center gap-3 backdrop-blur-md w-[calc(100%-2rem)] max-w-sm text-center justify-center"
+            className="fixed top-6 left-1/2 z-50 px-5 py-3.5 bg-[#7F011F] border border-[#F5EBD0]/35 text-[#F5EBD0] text-xs tracking-wider uppercase font-mono rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center gap-3 backdrop-blur-md w-[calc(100%-2rem)] max-w-sm text-center justify-center"
           >
-            <Lock className="w-4 h-4 text-purple-400 shrink-0" />
+            <Lock className="w-4 h-4 text-[#F5EBD0] shrink-0" />
             <span>{toast}</span>
           </motion.div>
         )}
@@ -98,20 +128,20 @@ export const Dashboard = ({
       <div className="max-w-6xl mx-auto relative z-10">
         
         {/* Cabecera del Panel */}
-        <header className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/[0.04] pb-8">
+        <header className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#F5EBD0]/10 pb-8">
           <div>
-            <div className="flex items-center gap-2 mb-2 text-purple-400 font-mono text-xs uppercase tracking-widest font-bold">
-              <Compass className="w-4 h-4 text-purple-400" />
-              <span>Mi corazon late por ti</span>
+            <div className="flex items-center gap-2 mb-2 text-[#F5EBD0]/80 font-mono text-xs uppercase tracking-widest font-bold">
+              <Compass className="w-4 h-4 text-[#F5EBD0]/80" />
+              <span>Bitácora de Sentimientos</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-serif font-semibold text-white tracking-wide">
-              Un recorrido maravillo donde las palabras no alcanzan 
+            <h1 className="text-3xl sm:text-4xl font-serif font-semibold text-[#F5EBD0] tracking-wide">
+              El Recorrido de Nataly
             </h1>
           </div>
 
           {/* Estado de la simulación */}
           {isSimulation && (
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-yellow-500/10 border border-yellow-500/20 text-yellow-400/90 text-[11px] font-mono rounded-lg self-start md:self-auto">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-[#F5EBD0]/05 border border-[#F5EBD0]/20 text-[#F5EBD0]/90 text-[11px] font-mono rounded-lg self-start md:self-auto">
               <Calendar className="w-3.5 h-3.5" />
               <span>Simulación Activa: {targetDate}</span>
               <button 
@@ -125,17 +155,17 @@ export const Dashboard = ({
         </header>
 
         {/* Tarjeta de Estadísticas / Progreso */}
-        <section className="mb-12 p-6 rounded-2xl bg-gradient-to-br from-[#121215] to-[#0e0e11] border border-white/[0.05] shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
+        <section className="mb-12 p-6 rounded-2xl bg-[#F5EBD0]/02 border border-[#F5EBD0]/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             
             {/* Texto de progreso */}
             <div className="flex items-center gap-4">
-              <div className="p-3 bg-purple-500/10 border border-purple-500/20 rounded-xl text-purple-400">
-                <Heart className="w-6 h-6 fill-purple-500/10" />
+              <div className="p-3 bg-[#F5EBD0]/05 border border-[#F5EBD0]/10 rounded-xl text-[#F5EBD0]">
+                <Heart className="w-6 h-6 fill-[#F5EBD0]/10" />
               </div>
               <div>
-                <span className="text-xs text-gray-500 uppercase tracking-widest font-mono">Progreso de Desbloqueo</span>
-                <h4 className="text-lg font-sans font-medium text-purple-100 mt-0.5">
+                <span className="text-xs text-gray-400 uppercase tracking-widest font-mono">Progreso de Desbloqueo</span>
+                <h4 className="text-lg font-sans font-medium text-[#F5EBD0]/90 mt-0.5">
                   {unlockedCount} de {totalCount} poemas liberados
                 </h4>
               </div>
@@ -147,12 +177,12 @@ export const Dashboard = ({
                 <span>Completado</span>
                 <span>{progressPercent}%</span>
               </div>
-              <div className="w-full h-2.5 bg-white/[0.04] rounded-full overflow-hidden border border-white/[0.02]">
+              <div className="w-full h-2.5 bg-black/25 rounded-full overflow-hidden border border-white/[0.01]">
                 <motion.div 
                   initial={{ width: 0 }}
                   animate={{ width: `${progressPercent}%` }}
                   transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                  className="h-full bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full"
+                  className="h-full bg-gradient-to-r from-[#F5EBD0] to-[#e3d7bb] rounded-full"
                 />
               </div>
             </div>
@@ -195,48 +225,76 @@ export const Dashboard = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setActivePoem(null)}
-            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex justify-center items-center p-4 cursor-zoom-out"
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex justify-center items-center p-4 cursor-zoom-out"
           >
             {/* Contenedor del poema expandido */}
             <motion.article 
               layoutId={`card-${activePoem.id}`}
               onClick={(e) => e.stopPropagation()}
               transition={{ type: "spring", stiffness: 220, damping: 26 }}
-              className="w-full max-w-3xl bg-gradient-to-b from-[#141416] to-[#0a0a0c] border border-purple-500/25 p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-2xl relative cursor-default max-h-[90vh] overflow-y-auto"
+              className={`w-full max-w-3xl bg-gradient-to-b ${getModalBg(activePoem.module)} p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-2xl relative cursor-default max-h-[90vh] overflow-y-auto border transition-all duration-500`}
             >
               {/* Botón de Cierre */}
               <button 
                 onClick={() => setActivePoem(null)}
-                className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 bg-white/5 border border-white/5 text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300 cursor-pointer"
+                className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 bg-white/5 border border-white/5 text-[#F5EBD0]/70 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300 cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>
 
               {/* Encabezado del Lector */}
-              <header className="mb-6 pb-4 border-b border-white/[0.04] pr-10 sm:pr-0">
+              <header className="mb-6 pb-4 border-b border-[#F5EBD0]/10 pr-10 sm:pr-0">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-[10px] uppercase tracking-widest text-purple-400 font-mono font-bold">
+                  <span className="text-[10px] uppercase tracking-widest text-[#F5EBD0]/80 font-mono font-bold">
                     {activePoem.module}
                   </span>
-                  <span className="text-[11px] text-gray-500 font-mono">
+                  <span className="text-[11px] text-[#F5EBD0]/60 font-mono">
                     Poema N° {String(activePoem.poemNumber).padStart(3, '0')}
                   </span>
                 </div>
-                <h2 className="text-xl sm:text-3xl font-serif font-bold text-purple-100 tracking-wide mt-2">
+                <h2 className="text-xl sm:text-3xl font-serif font-bold text-[#F5EBD0] tracking-wide mt-2">
                   {activePoem.title}
                 </h2>
               </header>
 
-              {/* Contenido Poético Completo (Sin Clamping) */}
-              <p className="text-gray-200 text-sm sm:text-lg leading-relaxed font-light italic whitespace-pre-line border-l-2 border-purple-500/30 pl-4 sm:pl-5 py-2 mb-8 bg-white/[0.01] rounded-r-xl">
-                {activePoem.content.join('\n\n')}
-              </p>
+              {/* Contenido Poético Completo con animación de revelado de pluma */}
+              <motion.div 
+                variants={{
+                  hidden: {},
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.15,
+                      delayChildren: 0.2
+                    }
+                  }
+                }}
+                initial="hidden"
+                animate="visible"
+                className="border-l-2 border-[#F5EBD0]/40 pl-4 sm:pl-5 py-1 mb-8 bg-white/[0.005] rounded-r-xl"
+              >
+                {activePoem.content.map((stanza, idx) => (
+                  <motion.p 
+                    key={idx}
+                    variants={{
+                      hidden: { opacity: 0, y: 8 },
+                      visible: { 
+                        opacity: 1, 
+                        y: 0,
+                        transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+                      }
+                    }}
+                    className="text-[#F5EBD0] text-sm sm:text-lg leading-relaxed font-poem italic mb-5 last:mb-0"
+                  >
+                    {stanza}
+                  </motion.p>
+                ))}
+              </motion.div>
 
               {/* Pie de Página del Lector */}
-              <footer className="pt-4 border-t border-white/[0.03] flex justify-between items-center text-[10px] text-gray-500 font-mono">
+              <footer className="pt-4 border-t border-[#F5EBD0]/10 flex justify-between items-center text-[10px] text-[#F5EBD0]/60 font-mono">
                 <span>Revelado el {activePoem.unlockDate}</span>
-                <div className="flex items-center gap-1 text-purple-400/80">
-                  <Heart className="w-3 h-3 fill-purple-400/20" />
+                <div className="flex items-center gap-1 text-[#F5EBD0]/80">
+                  <Heart className="w-3 h-3 fill-[#F5EBD0]/20" />
                   <span>Para Nataly</span>
                 </div>
               </footer>

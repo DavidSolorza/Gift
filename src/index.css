@@ -1,25 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Outfit", system-ui, sans-serif;
+  --font-poem: "Lora", Georgia, serif;
   
-  --color-purple-650: #6d28d9;
-  --color-purple-550: #8b5cf6;
+  --color-poema-wine: #7F011F;
+  --color-poema-sand: #F5EBD0;
 }
 
 :root {
   font-family: var(--font-sans);
-  background-color: #0A0A0C;
-  color: #cdd6f4;
+  background-color: #7F011F;
+  color: #F5EBD0;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: #0A0A0C;
+  background-color: #7F011F;
 }
 
 #root {

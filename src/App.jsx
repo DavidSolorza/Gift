@@ -26,6 +26,11 @@ function App() {
 
   const [currentView, setCurrentView] = useState('landing');
   const [bypassShutdown, setBypassShutdown] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    setMousePos({ x: e.clientX, y: e.clientY });
+  };
 
   const handleBypass = () => {
     setBypassShutdown(true);
@@ -36,10 +41,10 @@ function App() {
   // Vista de pantalla completa de Carga (Skeleton Loader premium)
   if (loading) {
     return (
-      <div className="min-h-screen w-screen bg-[#0A0A0C] flex flex-col justify-center items-center px-6">
-        <Heart className="w-10 h-10 text-purple-500/40 animate-pulse mb-6" />
-        <div className="w-48 h-1.5 bg-white/[0.03] border border-white/5 rounded-full overflow-hidden">
-          <div className="h-full bg-purple-500 rounded-full animate-[loading_1.5s_infinite_ease-in-out]" style={{ width: '40%' }}></div>
+      <div className="min-h-screen w-screen bg-gradient-to-br from-[#7F011F] to-[#550013] flex flex-col justify-center items-center px-6">
+        <Heart className="w-10 h-10 text-[#F5EBD0]/40 animate-pulse mb-6" />
+        <div className="w-48 h-1.5 bg-[#F5EBD0]/05 border border-[#F5EBD0]/10 rounded-full overflow-hidden">
+          <div className="h-full bg-[#F5EBD0] rounded-full animate-[loading_1.5s_infinite_ease-in-out]" style={{ width: '40%' }}></div>
         </div>
         <style>{`
           @keyframes loading {
@@ -54,13 +59,13 @@ function App() {
   // Vista de error (Error boundary simplificado de UI)
   if (error) {
     return (
-      <div className="min-h-screen w-screen bg-[#0A0A0C] flex flex-col justify-center items-center px-6 text-center select-none">
-        <div className="p-4 bg-red-500/10 border border-red-500/20 text-red-400 rounded-2xl mb-4 text-sm font-mono max-w-md">
+      <div className="min-h-screen w-screen bg-gradient-to-br from-[#7F011F] to-[#550013] flex flex-col justify-center items-center px-6 text-center select-none">
+        <div className="p-4 bg-white/5 border border-red-500/20 text-[#F5EBD0] rounded-2xl mb-4 text-sm font-mono max-w-md">
           {error}
         </div>
         <button 
           onClick={() => window.location.reload()} 
-          className="px-6 py-2 bg-white/5 border border-white/10 hover:bg-white/10 rounded-full text-xs font-mono tracking-wider text-gray-300 uppercase transition-all duration-300 cursor-pointer"
+          className="px-6 py-2 bg-[#F5EBD0]/10 border border-[#F5EBD0]/20 hover:bg-[#F5EBD0]/20 rounded-full text-xs font-mono tracking-wider text-[#F5EBD0] uppercase transition-all duration-300 cursor-pointer"
         >
           Reintentar Carga
         </button>
@@ -88,10 +93,16 @@ function App() {
   }
 
   return (
-    <>
+    <div onMouseMove={handleMouseMove} className="relative min-h-screen w-screen overflow-x-hidden">
       <div className="grain-overlay" />
+      <div 
+        className="fixed inset-0 z-0 pointer-events-none transition-opacity duration-1000 hidden md:block"
+        style={{
+          background: `radial-gradient(600px at ${mousePos.x}px ${mousePos.y}px, rgba(245, 235, 208, 0.04), transparent 80%)`
+        }}
+      />
       {activeContent}
-    </>
+    </div>
   );
 }
 
